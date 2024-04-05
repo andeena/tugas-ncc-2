@@ -9,7 +9,7 @@ app.use(express.json());
 const db = [
     {
         id: 1, 
-        nama: "Andina",
+        nama: "Andeen",
         asal: "Sidoarjo",
         angkatan: 2022,
         gender: true, // true cewe
@@ -24,6 +24,18 @@ const db = [
         nrp: 67890
     }
 ];
+
+app.get("/", (req, res) => {
+    res.send("Hiii ol!!");
+});
+
+app.get("/page1", (req, res) => {
+    res.send("ini halaman satu");
+});
+
+app.get("/page2", (req, res) => {
+    res.send("ini halaman dua");
+});
 
 // const dbconnection = mysql.createConnection({
 //     host: 'localhost',
